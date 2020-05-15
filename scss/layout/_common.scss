@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../../fonts/icomoon.eot?8e87fv');
+  src: url('../../fonts/icomoon.eot?8e87fv#iefix') format("embedded-opentype"), url('../../fonts/icomoon.ttf?8e87fv') format("truetype"), url('../../fonts/icomoon.woff?8e87fv') format("woff"), url('../../fonts/icomoon.svg?8e87fv#icomoon') format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1282px;
+  padding: 0 15px;
+}
+
+.card-img {
+  height: 265px;
+}
+
+.btn {
+  display: block;
+  width: 150px;
+  padding: 15px 0;
+  margin: auto;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.card {
+  position: relative;
+  order: 1;
+  flex: 1 1 30%;
+  margin: 15px;
+  height: 265px;
+  width: calc(100% - 30px);
+
+  .plus {
+    position: relative;
+    flex-grow: 1;
+
+    &:before, &:after {
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\ea0a";
+      color: #fff;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  }
+
+  &:hover .hover-box {
+    opacity: 1;
+  }
+
+  .hover-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+}
+
+.card-title {
+  margin: 0;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.flex-box {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: auto;
+}
+
+.title {
+  border-left: 10px solid #4E5A62;
+  padding-left: 10px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  font-size: 46px;
+}
+
+@media (max-width: 576px) {
+  .card {
+    position: relative;
+    order: 1;
+    flex: 1 1 100%;
+    margin: 15px;
+    width: calc(50% - 30px);
+  }
+
+  .title {
+    display: inline-block;
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 5px solid #4E5A62;
+    box-sizing: border-box;
+    font-size: 30px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .title-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    margin: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: calc(33.33% - 30px);
+  }
+}
